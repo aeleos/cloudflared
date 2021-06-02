@@ -4,14 +4,14 @@ Argo Tunnel creates a secure, outbound-only connection between your services and
 
 # Set-Up Steps
 
-In unraid temrinal, run the following command to authorise the container and pull the cert
+1. In unraid temrinal, run the following command to authorise the container and pull the cert
 
 ```
 docker run -v /mnt/user/appdata/cloudflared:/home/nonroot/.cloudflared/ cloudflare/cloudflared tunnel login 
 ```
 It will print out a link, this will take you to cloudflare to authorise your container. Once you choose your domain, it will send the cert to the container (in the persistent volume we set up).
 
-Now we need to create a tunnel. To do this we will run another command from the unraid terminal
+2. Now we need to create a tunnel. To do this we will run another command from the unraid terminal
 
 ```
 docker run -v /mnt/user/appdata/cloudflared:/home/nonroot/.cloudflared/ cloudflare/cloudflared tunnel create <name>
@@ -19,12 +19,12 @@ docker run -v /mnt/user/appdata/cloudflared:/home/nonroot/.cloudflared/ cloudfla
 
 This will return your tunnels UUID, copy this and keep it safe.
 
-Now we need to create a config.yaml to configure the tunnel
+3. Now we need to create a config.yaml to configure the tunnel
 
 ```
 nano /mnt/user/appdata/cloudflared/config.yaml
 ```
-Now paste in the following and amend your reverse proxy IP:PORT and tunnel UUID
+4. Now paste in the following and amend your reverse proxy IP:PORT and tunnel UUID
 
 ```
 tunnel: UUID
@@ -35,28 +35,29 @@ ingress:
     originRequest:
       noTLSVerify: true
 ```
-Now, we need to install the app inside the Unraid UI.
+5. Now, we need to install the app inside the Unraid UI.
 
-Go to the docker tab and select "Add Container"
+ - Go to the docker tab and select "Add Container"
 
-Add the following Repository: ``cloudflare/cloudflared``
+ - Add the following Repository: ``cloudflare/cloudflared``
 
-Then, select "add another path" 
+ - Then, select "add another path" 
 
-Add The following path: 
+ - Add The following path:
+ 
 Host:  ``/mnt/user/appdata/cloudflared``
 Container: ``/home/nonroot/.cloudflared/``
 
-Now we need to add some "Post Arguments". To do this we need to enable the "Advanced View" in the top right corner.
+ - Now we need to add some "Post Arguments". To do this we need to enable the "Advanced View" in the top right corner.
 
-Here we can add the following command with your UUID inserted
+ - Here we can add the following command with your UUID inserted
 
 Post arguments: 
 ```tunnel run UUID```
 
-Now you can start your container and if all done correctly with no errors, you should have a running tunnel!
+6. Now you can start your container and if all done correctly with no errors, you should have a running tunnel!
 
-The next step will be to edit your domain DNS records.
+7. The next step will be to edit your domain DNS records.
 
 If you have an A record already, you can remove this as it is now not needed.
 
