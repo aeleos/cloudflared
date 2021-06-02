@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>cloudflared</Name>
+  <Repository>cloudflare/cloudflared</Repository>
+  <Registry>https://hub.docker.com/r/cloudflare/cloudflared/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/aeleos/cloudflared</Support>
+  <Project>https://github.com/aeleos/cloudflared</Project>
+  <Overview>Contains the command-line client for Argo Tunnel, a tunneling daemon that proxies any local webserver through the Cloudflare network. Extensive documentation can be found in the Argo Tunnel section of the Cloudflare Docs.&#xD;
+&#xD;
+Instructions for installation can be found at https://github.com/aeleos/cloudflared</Overview>
+  <Category>Security:</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/aeleos/cloudflared/main/cloudflare-icon.png</Icon>
+  <ExtraParams/>
+  <PostArgs>tunnel run 71d9cf64-4bef-4b84-b669-039222a43d1a</PostArgs>
+  <CPUset/>
+  <DateInstalled>1622668531</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Contains the command-line client for Argo Tunnel, a tunneling daemon that proxies any local webserver through the Cloudflare network. Extensive documentation can be found in the Argo Tunnel section of the Cloudflare Docs.&#xD;
+&#xD;
+Instructions for installation can be found at https://github.com/aeleos/cloudflared</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish/>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/cloudflared</HostDir>
+      <ContainerDir>/home/nonroot/.cloudflared/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="data" Target="/home/nonroot/.cloudflared/" Default="" Mode="rw" Description="Container Path: /home/nonroot/.cloudflared/" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/cloudflared</Config>
+</Container>
