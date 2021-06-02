@@ -27,8 +27,8 @@ nano /mnt/user/appdata/cloudflared/config.yaml
 Now paste in the following and amend your reverse proxy IP:PORT and tunnel UUID
 
 ```
-tunnel: <UUID>
-credentials-file: /home/nonroot/.cloudflared/<UUID>.json
+tunnel: UUID
+credentials-file: /home/nonroot/.cloudflared/UUID.json
 
 ingress:
   - service: https://REVERSEPROXYIP:PORT/
@@ -52,7 +52,7 @@ Now we need to add some "Post Arguments". To do this we need to enable the "Adva
 Here we can add the following command with your UUID inserted
 
 Post arguments: 
-```tunnel run <UUID>```
+```tunnel run UUID```
 
 Now you can start your container and if all done correctly with no errors, you should have a running tunnel!
 
@@ -60,13 +60,13 @@ The next step will be to edit your domain DNS records.
 
 If you have an A record already, you can remove this as it is now not needed.
 
-Replace your A record with a CNAME record, that points to the domain root (@) and for the content, you need to add <UUID>.cfargotunnel.com (inserting your UUID that was copied earlier).
+Replace your A record with a CNAME record, that points to the domain root (@) and for the content, you need to add UUID.cfargotunnel.com (inserting your UUID that was copied earlier).
   
 ## Example
   
 |Type|Name|Value|TTL|Status|
 | --- | --- | --- | --- | --- |
-|CNAME|@|<UUID>.cfargotunnel.com|Automatic|Orange ☁️|
+|CNAME|@|UUID.cfargotunnel.com|Automatic|Orange ☁️|
 |CNAME|plex|@|Automatic|Orange ☁️|
 |CNAME|portainer|@|Automatic|Orange ☁️|
 |CNAME|radarr|@|Automatic|Orange ☁️|
