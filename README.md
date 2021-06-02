@@ -18,17 +18,27 @@ ingress:
 ```
 
 CA Apps
+  
 Search cloudflared
+  
 Search  Docker hub
+  
 Import cloudflare/cloudflared
 
+  
 Add path: 
+  
 Host:  /mnt/user/appdata/cloudflared
+  
 Container: /home/nonroot/.cloudflared/
 
+  
 Advanced:
+  
 Post arguments: tunnel run <UUID>
 
+  
 DNS w/ Cloudflare
+  
 CNAME points to <UUID>.cfargotunnel.com
 
