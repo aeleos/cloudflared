@@ -7,14 +7,14 @@ Argo Tunnel creates a secure, outbound-only connection between your services and
 1. In unraid temrinal, run the following command to authorise the container and pull the cert
 
 ```
-docker run -v /mnt/user/appdata/cloudflared:/home/nonroot/.cloudflared/ cloudflare/cloudflared tunnel login 
+docker run -it --rm -v /mnt/user/appdata/cloudflared:/home/nonroot/.cloudflared/ cloudflare/cloudflared tunnel login 
 ```
 It will print out a link, this will take you to cloudflare to authorise your container. Once you choose your domain, it will send the cert to the container (in the persistent volume we set up).
 
 2. Now we need to create a tunnel. To do this we will run another command from the unraid terminal
 
 ```
-docker run -v /mnt/user/appdata/cloudflared:/home/nonroot/.cloudflared/ cloudflare/cloudflared tunnel create <name>
+docker run -it --rm -v /mnt/user/appdata/cloudflared:/home/nonroot/.cloudflared/ cloudflare/cloudflared tunnel create <name>
 ```
 
 This will return your tunnels UUID, copy this and keep it safe.
