@@ -7,7 +7,7 @@ docker run -v /mnt/user/appdata/cloudflared:/home/nonroot/.cloudflared/ cloudfla
 Returns UUID - <UUID>
 
 nano /mnt/user/appdata/cloudflared/config.yaml
-
+```
 tunnel: <UUID>
 credentials-file: /home/nonroot/.cloudflared/<UUID>.json
 
@@ -15,7 +15,7 @@ ingress:
   - service: https://192.168.1.101:443
     originRequest:
       noTLSVerify: true
-
+```
 
 CA Apps
 Search cloudflared
