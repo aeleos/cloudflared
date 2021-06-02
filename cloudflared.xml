@@ -17,7 +17,7 @@ Instructions for installation can be found at https://github.com/aeleos/cloudfla
   <TemplateURL/>
   <Icon>https://raw.githubusercontent.com/aeleos/cloudflared/main/cloudflare-icon.png</Icon>
   <ExtraParams/>
-  <PostArgs>tunnel run 71d9cf64-4bef-4b84-b669-039222a43d1a</PostArgs>
+  <PostArgs>tunnel run <UUID></PostArgs>
   <CPUset/>
   <DateInstalled>1622669003</DateInstalled>
   <DonateText/>
