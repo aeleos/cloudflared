@@ -7,7 +7,7 @@
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>https://github.com/aeleos/cloudflared</Support>
+  <Support>https://forums.unraid.net/topic/109584-support-aeleos-cloudflared-tunnels/</Support>
   <Project>https://github.com/aeleos/cloudflared</Project>
   <Overview>Contains the command-line client for Argo Tunnel, a tunneling daemon that proxies any local webserver through the Cloudflare network. Extensive documentation can be found in the Argo Tunnel section of the Cloudflare Docs.&#xD;
 &#xD;
@@ -19,7 +19,7 @@ Instructions for installation can be found at https://github.com/aeleos/cloudfla
   <ExtraParams/>
   <PostArgs>tunnel run 71d9cf64-4bef-4b84-b669-039222a43d1a</PostArgs>
   <CPUset/>
-  <DateInstalled>1622668531</DateInstalled>
+  <DateInstalled>1622669003</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Description>Contains the command-line client for Argo Tunnel, a tunneling daemon that proxies any local webserver through the Cloudflare network. Extensive documentation can be found in the Argo Tunnel section of the Cloudflare Docs.&#xD;
