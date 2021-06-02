@@ -37,27 +37,31 @@ ingress:
 ```
 5. Now, we need to install the app inside the Unraid UI.
 
- - Go to the docker tab and select "Add Container"
+   - Go to the docker tab and select "Add Container"
 
- - Add the following Repository: ``cloudflare/cloudflared``
+   - Add the following Repository: ``cloudflare/cloudflared``
 
- - Then, select "add another path" 
+   - Then, select "add another path" 
 
- - Add The following path:
+   - Add The following path:
  
-Host:  ``/mnt/user/appdata/cloudflared``
-Container: ``/home/nonroot/.cloudflared/``
+```
+Host:  /mnt/user/appdata/cloudflared
+Container: /home/nonroot/.cloudflared/
+```
 
- - Now we need to add some "Post Arguments". To do this we need to enable the "Advanced View" in the top right corner.
+6. Now we need to add some "Post Arguments". To do this we need to enable the "Advanced View" in the top right corner.
 
- - Here we can add the following command with your UUID inserted
+   - Here we can add the following command with your UUID inserted
 
+```
 Post arguments: 
-```tunnel run UUID```
+tunnel run UUID
+```
 
-6. Now you can start your container and if all done correctly with no errors, you should have a running tunnel!
+7. Now you can start your container and if all done correctly with no errors, you should have a running tunnel!
 
-7. The next step will be to edit your domain DNS records.
+8. The next step will be to edit your domain DNS records.
 
 If you have an A record already, you can remove this as it is now not needed.
 
