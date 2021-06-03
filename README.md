@@ -14,7 +14,7 @@ It will print out a link, this will take you to cloudflare to authorise your con
 2. Now we need to create a tunnel. To do this we will run another command from the unraid terminal
 
 ```
-docker run -it --rm -v /mnt/user/appdata/cloudflared:/home/nonroot/.cloudflared/ cloudflare/cloudflared tunnel create <name>
+docker run -it --rm -v /mnt/user/appdata/cloudflared:/home/nonroot/.cloudflared/ cloudflare/cloudflared tunnel create TUNNELNAME
 ```
 
 This will return your tunnels UUID, copy this and keep it safe.
@@ -56,7 +56,7 @@ Container: /home/nonroot/.cloudflared/
 
 ```
 Post arguments: 
-tunnel run UUID
+tunnel run TUNNELNAME
 ```
 
 7. Now you can start your container and if all done correctly with no errors, you should have a running tunnel!
