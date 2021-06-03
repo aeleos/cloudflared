@@ -17,7 +17,7 @@ It will print out a link, this will take you to cloudflare to authorise your con
 docker run -it --rm -v /mnt/user/appdata/cloudflared:/home/nonroot/.cloudflared/ cloudflare/cloudflared tunnel create <name>
 ```
 
-This will return your tunnels UUID, copy this and keep it safe.
+This will return your tunnels UUID. Keep the UUID on hand as we will need it to refer back to this tunnel in later steps.
 
 3. Now we need to create a config.yaml to configure the tunnel
 
@@ -37,22 +37,17 @@ ingress:
 ```
 5. Now, we need to install the app inside the Unraid UI.
 
-   - Go to the docker tab and select "Add Container"
+   - Go to the CA Apps Tab
 
-   - Add the following Repository: ``cloudflare/cloudflared``
+   - Search for cloudflared
 
-   - Then, select "add another path" 
+   - Install from aeleos' Repository
 
-   - Add The following path:
+   - Make the following changes:
  
-```
-Host:  /mnt/user/appdata/cloudflared
-Container: /home/nonroot/.cloudflared/
-```
+6. Now we need to change the "Post Arguments". To do this we need to enable the "Advanced View" in the top right corner.
 
-6. Now we need to add some "Post Arguments". To do this we need to enable the "Advanced View" in the top right corner.
-
-   - Here we can add the following command with your UUID inserted
+   - You should see the below command inside of "Post Arguments". Replace UUID the the UUID for your tunnel generated in step 2.
 
 ```
 Post arguments: 
