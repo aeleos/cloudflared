@@ -2,9 +2,13 @@
 
 Argo Tunnel creates a secure, outbound-only connection between your services and Cloudflare by deploying a lightweight connector in your environment. With this model, your team does not need to go through the hassle of poking holes in your firewall or validating that traffic originated from Cloudflare IPs.
 
+# Prerequisite
+
+For this setup, you need to have a domain which is managed by CloudFlare, and can be done on the free plan. 
+
 # Set-Up Steps
 
-1. In unraid temrinal, run the following command to authorise the container and pull the cert
+1. In unraid temrinal, run the following command to authorise cloudflared with the cloudflare site you want to setup with a tunnel.
 
 ```
 docker run -it --rm -v /mnt/user/appdata/cloudflared:/home/nonroot/.cloudflared/ cloudflare/cloudflared tunnel login 
