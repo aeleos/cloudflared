@@ -57,7 +57,7 @@ ingress:
 
 ```
 Post arguments: 
-tunnel run TUNNELNAME
+tunnel run UUID
 ```
 
 7. Now you can start your container and if all done correctly with no errors, you should have a running tunnel!
