@@ -18,7 +18,7 @@ It will print out a link to cloudflare. Put this link in your web browser, and s
 2. Now we need to create a tunnel. To do this we will run another command from the unraid terminal
 
 ```
-docker run -it --rm -v /mnt/user/appdata/cloudflared:/home/nonroot/.cloudflared/ cloudflare/cloudflared tunnel create <name>
+docker run -it --rm -v /mnt/user/appdata/cloudflared:/home/nonroot/.cloudflared/ cloudflare/cloudflared tunnel create TUNNELNAME
 ```
 
 This will create your tunnels UUID.json file, which contains a secret used to authenticate your tunneled connection with cloudflare. The JSON file is only needed for running the tunnel, but any tunnel modifications require the cert.pem. More information about what requires what can be found [here](https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/create-tunnel).
@@ -57,7 +57,7 @@ ingress:
 
 ```
 Post arguments: 
-tunnel run UUID
+tunnel run TUNNELNAME
 ```
 
 7. Now you can start your container and if all done correctly with no errors, you should have a running tunnel!
