@@ -72,9 +72,9 @@ tunnel run UUID
 
 8. The next step will be to edit your domain DNS records.
 
- - If you have an A record already, you can remove this as it is now not needed.
+   - If you have an A record already, you can remove this as it is now not needed.
 
- - Replace your A record with a CNAME record, that points to the domain root (@) and for the content, you need to add UUID.cfargotunnel.com (inserting your UUID that was copied earlier).
+   - Replace your A record with a CNAME record, that points to the domain root (@) and for the content, you need to add UUID.cfargotunnel.com (inserting your UUID that was copied earlier).
   
 ## Example
   
