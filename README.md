@@ -30,7 +30,7 @@ Make sure you copy your UUID, as this will be used in later steps. It can always
 ```
 nano /mnt/user/appdata/cloudflared/config.yaml
 ```
-4. Now paste in the following and amend your reverse proxy IP:PORT and tunnel UUID
+4. Now paste in the following and amend your reverse proxy IP:PORT, tunnel UUID and domain name if applicable
 
 ```
 tunnel: UUID
