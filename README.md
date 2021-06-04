@@ -106,8 +106,8 @@ Ingress rules resolve top down, so this should above the - service: https://REVE
 
 3. Sign up for Cloudflare Teams
 
- - Can be done [here](https://www.cloudflare.com/teams-pricing/), free plan works up to 50 users but needs billing details, you may be able to get it to work with no plan
+   - Can be done [here](https://www.cloudflare.com/teams-pricing/), free plan works up to 50 users but needs billing details, you may be able to get it to work with no plan
 
 4. Add an Teams application for your SSH service and enable browser based rendering
 
- - Guide by cloudflare can be found [here](https://developers.cloudflare.com/cloudflare-one/tutorials/ssh)
+   - Guide by cloudflare can be found [here](https://developers.cloudflare.com/cloudflare-one/tutorials/ssh)
