@@ -14,12 +14,12 @@
 Instructions for installation can be found at https://github.com/aeleos/cloudflared</Overview>
   <Category>Security:</Category>
   <WebUI/>
-  <TemplateURL/>
+  <TemplateURL>https://raw.githubusercontent.com/aeleos/cloudflared/main/cloudflared.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/aeleos/cloudflared/main/cloudflare-icon.png</Icon>
-  <ExtraParams/>
+  <ExtraParams>--restart unless-stopped</ExtraParams>
   <PostArgs>tunnel run UUID</PostArgs>
   <CPUset/>
-  <DateInstalled>1622669003</DateInstalled>
+  <DateInstalled>1622768343</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Description>Contains the command-line client for Argo Tunnel, a tunneling daemon that proxies any local webserver through the Cloudflare network. Extensive documentation can be found in the Argo Tunnel section of the Cloudflare Docs.&#xD;
