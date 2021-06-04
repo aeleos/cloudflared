@@ -98,7 +98,7 @@ You should now be able to access all of your apps without needed a port forward!
 
 2. Add Ingress Rule
 
-Ingress rules resolve top down, so this should above the - service: https://REVERSEPROXYIP:PORT/ rule.
+Ingress rules resolve top down, so this rule should be above the - service: https://REVERSEPROXYIP:PORT/ rule.
 
 ```
   - hostname: ssh.domain.com
