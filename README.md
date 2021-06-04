@@ -36,11 +36,19 @@ nano /mnt/user/appdata/cloudflared/config.yaml
 tunnel: UUID
 credentials-file: /home/nonroot/.cloudflared/UUID.json
 
+# if you have an SSL certificate on your reverse proxy, like in this example config file you need to tell CF
+# what hostname the certificate is valid for. This should be your root domain name.
+# if your reverse proxy does not have SSL, you can use something like this example
+# - service: http://REVERSEPROXYIP:PORT/
+# with no extra parameters
+
 ingress:
   - service: https://REVERSEPROXYIP:PORT/
     originRequest:
-      noTLSVerify: true
-```
+      originServerName: yourdomain.com
+      
+ ```
+ 
 5. Now, we need to install the app inside the Unraid UI.
 
    - Go to the CA Apps Tab
