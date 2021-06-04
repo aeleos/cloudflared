@@ -87,3 +87,27 @@ Replace your A record with a CNAME record, that points to the domain root (@) an
 |CNAME|sonarr|@|Automatic|Orange ☁️|
   
 You should now be able to access all of your apps without needed a port forward!
+
+# Enabling SSH Access via Web Rendered Terminal
+
+1. Create a DNS record for the subdomain you want to go to for SSH access. Below is an example
+
+|CNAME|ssh|domain.com|Automatic|Orange ☁️|
+
+2. Add Ingress Rule
+
+Ingress rules resolve top down, so this should above the - service: https://REVERSEPROXYIP:PORT/ rule.
+
+```
+  - hostname: ssh.domain.com
+    service: ssh://SSHIP:PORT
+
+```
+
+3. Sign up for Cloudflare Teams
+
+Can be done [here](https://www.cloudflare.com/teams-pricing/), free plan works up to 50 users but needs billing details, you may be able to get it to work with no plan
+
+4. Add an Teams application for your SSH service and enable browser based rendering
+
+Guide by cloudflare can be found [here](https://developers.cloudflare.com/cloudflare-one/tutorials/ssh)
