@@ -72,9 +72,9 @@ tunnel run UUID
 
 8. The next step will be to edit your domain DNS records.
 
-If you have an A record already, you can remove this as it is now not needed.
+ - If you have an A record already, you can remove this as it is now not needed.
 
-Replace your A record with a CNAME record, that points to the domain root (@) and for the content, you need to add UUID.cfargotunnel.com (inserting your UUID that was copied earlier).
+ - Replace your A record with a CNAME record, that points to the domain root (@) and for the content, you need to add UUID.cfargotunnel.com (inserting your UUID that was copied earlier).
   
 ## Example
   
@@ -106,8 +106,8 @@ Ingress rules resolve top down, so this should above the - service: https://REVE
 
 3. Sign up for Cloudflare Teams
 
-Can be done [here](https://www.cloudflare.com/teams-pricing/), free plan works up to 50 users but needs billing details, you may be able to get it to work with no plan
+ - Can be done [here](https://www.cloudflare.com/teams-pricing/), free plan works up to 50 users but needs billing details, you may be able to get it to work with no plan
 
 4. Add an Teams application for your SSH service and enable browser based rendering
 
-Guide by cloudflare can be found [here](https://developers.cloudflare.com/cloudflare-one/tutorials/ssh)
+ - Guide by cloudflare can be found [here](https://developers.cloudflare.com/cloudflare-one/tutorials/ssh)
