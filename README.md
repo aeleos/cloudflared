@@ -92,6 +92,8 @@ You should now be able to access all of your apps without needed a port forward!
 
 1. Create a DNS record for the subdomain you want to go to for SSH access. Below is an example
 
+|Type|Name|Value|TTL|Status|
+| --- | --- | --- | --- | --- |
 |CNAME|ssh|domain.com|Automatic|Orange ☁️|
 
 2. Add Ingress Rule
