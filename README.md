@@ -93,6 +93,10 @@ tunnel run UUID
   
 You should now be able to access all of your apps without needed a port forward!
 
+# Support Me
+
+If you liked this guide and want to say thanks feel free to buy me a coffee https://www.buymeacoffee.com/aeleos
+
 # Enabling SSH Access via Web Rendered Terminal
 
 1. Create a DNS record for the subdomain you want to go to for SSH access. Below is an example
