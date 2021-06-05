@@ -2,6 +2,11 @@
 
 Argo Tunnel creates a secure, outbound-only connection between your services and Cloudflare by deploying a lightweight connector in your environment. With this model, your team does not need to go through the hassle of poking holes in your firewall or validating that traffic originated from Cloudflare IPs.
 
+### Support Me
+
+If you liked this guide and want to say thanks feel free to buy me a coffee https://www.buymeacoffee.com/aeleos
+
+
 # Prerequisite
 
 For this setup, you need to have a domain which is managed by CloudFlare, and can be done on the free plan. 
@@ -92,10 +97,6 @@ tunnel run UUID
 |CNAME|sonarr|@|Automatic|Orange ☁️|
   
 You should now be able to access all of your apps without needed a port forward!
-
-# Support Me
-
-If you liked this guide and want to say thanks feel free to buy me a coffee https://www.buymeacoffee.com/aeleos
 
 # Enabling SSH Access via Web Rendered Terminal
 
