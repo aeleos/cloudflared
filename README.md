@@ -48,7 +48,7 @@ ingress:
 
 # forward all traffic to reverse proxy over http
 #ingress:
-#  - service: http://REVERSEPROXYIP:PORT/
+#  - service: http://REVERSEPROXYIP:PORT
 
  ```
  See [here](https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/configuration/ingress) for more information about ingress rules and how they can be configured
