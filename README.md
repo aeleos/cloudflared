@@ -42,7 +42,7 @@ credentials-file: /home/nonroot/.cloudflared/UUID.json
 
 # forward all traffic to Reverse Proxy w/ SSL
 ingress:
-  - service: https://REVERSEPROXYIP:PORT/
+  - service: https://REVERSEPROXYIP:PORT
     originRequest:
       originServerName: yourdomain.com
 
