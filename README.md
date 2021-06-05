@@ -51,6 +51,8 @@ ingress:
 #  - service: http://REVERSEPROXYIP:PORT/
 
  ```
+ See [here](https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/configuration/ingress) for more information about ingress rules and how they can be configured
+ 
  
 5. Now, we need to install the app inside the Unraid UI.
 
