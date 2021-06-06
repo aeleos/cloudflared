@@ -123,3 +123,7 @@ Ingress rules resolve top down, so this rule should be above the - service: http
 4. Add an Teams application for your SSH service and enable browser based rendering
 
    - Guide by cloudflare can be found [here](https://developers.cloudflare.com/cloudflare-one/tutorials/ssh)
+
+# Credit
+
+ - Hawks for helping beta test the setup and documentation contributions
