@@ -6,6 +6,9 @@ Argo Tunnel creates a secure, outbound-only connection between your services and
 
 If you liked this guide and want to say thanks feel free to buy me a coffee https://www.buymeacoffee.com/aeleos
 
+# Video Guide
+
+If you would like to watch a video detailing all this information and more, check out IBRACORP's guide https://www.youtube.com/watch?v=RQ-6dActAr8
 
 # Prerequisite
 
