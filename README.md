@@ -45,11 +45,19 @@ nano /mnt/user/appdata/cloudflared/config.yaml
 tunnel: UUID
 credentials-file: /home/nonroot/.cloudflared/UUID.json
 
+# NOTE: You should only have one ingress tag, so if you uncomment one block comment the others
+
 # forward all traffic to Reverse Proxy w/ SSL
 ingress:
   - service: https://REVERSEPROXYIP:PORT
     originRequest:
       originServerName: yourdomain.com
+      
+#forward all traffic to Reverse Proxy w/ SSL and no TLS Verify
+#ingress:
+#  - service: https://REVERSEPROXYIP:PORT
+#    originRequest:
+#      noTLSVerify: true
 
 # forward all traffic to reverse proxy over http
 #ingress:
