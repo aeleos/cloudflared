@@ -173,3 +173,4 @@ docker run -it --rm -v /mnt/user/appdata/cloudflared:/home/nonroot/.cloudflared/
 # Credit
 
  - Hawks for helping beta test the setup and documentation contributions
+ - DiscDuck for documentation contributions
