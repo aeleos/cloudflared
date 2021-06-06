@@ -106,6 +106,20 @@ tunnel run UUID
   
 You should now be able to access all of your apps without needed a port forward!
 
+# Troubleshooting
+
+## Certificate not valid for any names
+
+If you see an error like 
+
+```
+in the logs of cloudflared i have this error "ERR  error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: x509: certificate is not valid for any names, but wanted to match youdomain.com
+```
+
+Try changing yourdomain.com to host.yourdomain.com, where host is a valid subdomain that you have a DNS record for. Despite this being a specific hostname, cloudflared should be able this name to verify certificates for your other subdomains as they pass through the tunnel.
+
+
+
 # Enabling SSH Access via Web Rendered Terminal
 
 1. Create a DNS record for the subdomain you want to go to for SSH access. Below is an example
