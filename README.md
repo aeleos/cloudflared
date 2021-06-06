@@ -149,6 +149,27 @@ Ingress rules resolve top down, so this rule should be above the - service: http
 
    - Guide by cloudflare can be found [here](https://developers.cloudflare.com/cloudflare-one/tutorials/ssh)
 
+# List and delete tunnels
+To **list** all configured tunnels and see active connections:
+```
+docker run -it --rm -v /mnt/user/appdata/cloudflared:/home/nonroot/.cloudflared/ cloudflare/cloudflared tunnel list
+```
+
+ID|NAME|CREATED|CONNECTIONS
+---|---|---|---
+NAMEID in hex|NAME of the tunnel|TIMESTAMP Date and time created|NUMBERxCFPOINT
+
+To **revoke and delete** a tunnel:
+```
+docker run -it --rm -v /mnt/user/appdata/cloudflared:/home/nonroot/.cloudflared/ cloudflare/cloudflared tunnel delete TUNNELID
+```
+
+If there are still active connections on the tunnel you need to force the deletion. Connections will be dropped:
+```
+docker run -it --rm -v /mnt/user/appdata/cloudflared:/home/nonroot/.cloudflared/ cloudflare/cloudflared tunnel delete -f TUNNELID
+```
+
+**Deleting the Tunnel also invalidates the credentials file associated with that Tunnel, meaning those connections can not be re-established.**
 # Credit
 
  - Hawks for helping beta test the setup and documentation contributions
