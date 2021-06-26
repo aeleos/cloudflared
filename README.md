@@ -16,7 +16,7 @@ For this setup, you need to have a domain which is managed by CloudFlare, and ca
 
 # Set-Up Steps
 
-1. In unraid temrinal, run the following command to authorise cloudflared with the cloudflare site you want to setup with a tunnel.
+1. In Unraid terminal, run the following command to authorise cloudflared with the cloudflare site you want to setup with a tunnel.
 
 ```
 docker run -it --rm -v /mnt/user/appdata/cloudflared:/home/nonroot/.cloudflared/ cloudflare/cloudflared tunnel login 
