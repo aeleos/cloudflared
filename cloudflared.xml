@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>cloudflared</Name>
-  <Repository>cloudflare/cloudflared</Repository>
+  <Repository>cloudflare/cloudflared:2021.8.2</Repository>
   <Registry>https://hub.docker.com/r/cloudflare/cloudflared/</Registry>
   <Network>bridge</Network>
   <MyIP/>
