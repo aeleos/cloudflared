@@ -19,14 +19,14 @@ For this setup, you need to have a domain which is managed by CloudFlare, and ca
 1. In Unraid terminal, run the following command to authorise cloudflared with the cloudflare site you want to setup with a tunnel.
 
 ```
-docker run -it --rm -v /mnt/user/appdata/cloudflared:/home/nonroot/.cloudflared/ cloudflare/cloudflared tunnel login 
+docker run -it --rm -v /mnt/user/appdata/cloudflared:/home/nonroot/.cloudflared/ cloudflare/cloudflared:2021.6.0 tunnel login 
 ```
 It will print out a link to cloudflare. Put this link in your web browser, and select which domain you want to use. Then, the daemon will automatically pull the certificate.
 
 2. Now we need to create a tunnel. To do this we will run another command from the unraid terminal
 
 ```
-docker run -it --rm -v /mnt/user/appdata/cloudflared:/home/nonroot/.cloudflared/ cloudflare/cloudflared tunnel create TUNNELNAME
+docker run -it --rm -v /mnt/user/appdata/cloudflared:/home/nonroot/.cloudflared/ cloudflare/cloudflared:2021.6.0 tunnel create TUNNELNAME
 ```
 
 This will create your tunnels UUID.json file, which contains a secret used to authenticate your tunneled connection with cloudflare. The JSON file is only needed for running the tunnel, but any tunnel modifications require the cert.pem. More information about what requires what can be found [here](https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/create-tunnel).
