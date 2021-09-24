@@ -121,7 +121,13 @@ in the logs of cloudflared i have this error "ERR  error="Unable to reach the or
 
 Try changing yourdomain.com to host.yourdomain.com, where host is a valid subdomain that you have a DNS record for. Despite this being a specific hostname, cloudflared should be able this name to verify certificates for your other subdomains as they pass through the tunnel.
 
+## Tunnel Create does not return an ID
 
+If when running the commands in your terminal, you aren't returned an ID, try running the command with the container version specified, like this
+
+```
+docker run -it --rm -v /mnt/user/appdata/cloudflared:/home/nonroot/.cloudflared/ cloudflare/cloudflared:2021.6.0 tunnel
+```
 
 # Enabling SSH Access via Web Rendered Terminal
 
