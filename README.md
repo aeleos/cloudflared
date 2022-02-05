@@ -121,6 +121,8 @@ in the logs of cloudflared i have this error "ERR  error="Unable to reach the or
 
 Try changing yourdomain.com to host.yourdomain.com, where host is a valid subdomain that you have a DNS record for. Despite this being a specific hostname, cloudflared should be able this name to verify certificates for your other subdomains as they pass through the tunnel.
 
+Another user has reported that they fixed this issue when using NPM by enalbing HTTP/2 and installing a CF origin certificate into their NPM instance. You may also get this error for other misconfigurations in the certificate returned by NPM.
+
 ## Tunnel Create does not return an ID
 
 If when running the commands in your terminal, you aren't returned an ID, try running the command with the container version specified, like this
