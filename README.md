@@ -1,10 +1,18 @@
-# Instructions for Cloudflare Tunnels (formerly known as Argo Tunnels) on Unraid
+# Instructions for Cloudflare Tunnels (formerly known as Argo Tunnels) on Unraid (Legacy Tunnels
 
 Argo Tunnel creates a secure, outbound-only connection between your services and Cloudflare by deploying a lightweight connector in your environment. With this model, your team does not need to go through the hassle of poking holes in your firewall or validating that traffic originated from Cloudflare IPs.
 
 ### Support Me
 
 If you liked this guide and want to say thanks feel free to buy me a coffee https://www.buymeacoffee.com/aeleos
+
+## Note
+This tutorial is only for legacy tunnels. For the current tunnels, all you need to do is go through the official CF guide and modify the template run command such that you start the container with your key rather than a configuration file. Then you can create an tunnels and routes through the CF panel. 
+
+Example command:
+```
+tunnel run --token ${CF_TUNNEL_TOKEN}
+```
 
 # Video Guide
 
