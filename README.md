@@ -1,4 +1,4 @@
-# Instructions for Cloudflare Tunnels (formerly known as Argo Tunnels) on Unraid (Legacy Tunnels
+# Instructions for Cloudflare Tunnels (formerly known as Argo Tunnels) on Unraid (Legacy Tunnels)
 
 Argo Tunnel creates a secure, outbound-only connection between your services and Cloudflare by deploying a lightweight connector in your environment. With this model, your team does not need to go through the hassle of poking holes in your firewall or validating that traffic originated from Cloudflare IPs.
 
@@ -7,7 +7,7 @@ Argo Tunnel creates a secure, outbound-only connection between your services and
 If you liked this guide and want to say thanks feel free to buy me a coffee https://www.buymeacoffee.com/aeleos
 
 ## Note
-This tutorial is only for legacy tunnels. For the current tunnels, all you need to do is go through the official CF guide and modify the template run command such that you start the container with your key rather than a configuration file. Then you can create an tunnels and routes through the CF panel. 
+This tutorial is only for legacy tunnels. For the current tunnels, all you need to do is go through the official CF guide and modify the template run command such that you start the container with your key rather than a configuration file. Then you can create tunnels and routes through the CF panel. 
 
 Example command:
 ```
@@ -127,9 +127,9 @@ If you see an error like
 in the logs of cloudflared i have this error "ERR  error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: x509: certificate is not valid for any names, but wanted to match youdomain.com
 ```
 
-Try changing yourdomain.com to host.yourdomain.com, where host is a valid subdomain that you have a DNS record for. Despite this being a specific hostname, cloudflared should be able this name to verify certificates for your other subdomains as they pass through the tunnel.
+Try changing yourdomain.com to host.yourdomain.com, where host is a valid subdomain that you have a DNS record for. Despite this being a specific hostname, cloudflared should be able to use this name to verify certificates for your other subdomains as they pass through the tunnel.
 
-Another user has reported that they fixed this issue when using NPM by enalbing HTTP/2 and installing a CF origin certificate into their NPM instance. You may also get this error for other misconfigurations in the certificate returned by NPM.
+Another user has reported that they fixed this issue when using NPM by enabling HTTP/2 and installing a CF origin certificate into their NPM instance. You may also get this error for other misconfigurations in the certificate returned by NPM.
 
 ## Tunnel Create does not return an ID
 
